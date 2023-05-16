@@ -5,7 +5,7 @@ from airflow.operators.email_operator import EmailOperator
 
 
 def task_hello_world():
-    return "Hello, world!"
+    return "Hello, world"
 
 
 def task_send_email(**kwargs):
