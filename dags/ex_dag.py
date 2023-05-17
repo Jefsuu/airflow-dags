@@ -12,7 +12,7 @@ def task_send_email(**kwargs):
     task_instance = kwargs['ti']
     message = task_instance.xcom_pull(task_ids='task_hello_world')
     subject = "Resultado da tarefa 'task_hello_world'"
-    to = "seu-email@exemplo.com"
+    to = open('/home/jefsu/airflow/files/email.txt', 'r').readlines()[0]
     return EmailOperator(
         task_id='task_send_email',
         to=to,
