@@ -25,7 +25,7 @@ default_args = {
 }
 
 with DAG(
-    "tutorial",
+    "first_dag",
     default_args=default_args,
     schedule=None,
     start_date=datetime(2023,5,22)
